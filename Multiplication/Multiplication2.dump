@@ -1,0 +1,31 @@
+
+Multiplication.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	d9 05 2c 00 00 00    	fld    DWORD PTR ds:0x2c
+  14:	d9 5c 24 1c          	fstp   DWORD PTR [esp+0x1c]
+  18:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  1f:	e8 00 00 00 00       	call   24 <_main+0x24>
+  24:	8d 44 24 14          	lea    eax,[esp+0x14]
+  28:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  2c:	c7 04 24 16 00 00 00 	mov    DWORD PTR [esp],0x16
+  33:	e8 00 00 00 00       	call   38 <_main+0x38>
+  38:	d9 44 24 14          	fld    DWORD PTR [esp+0x14]
+  3c:	d8 4c 24 1c          	fmul   DWORD PTR [esp+0x1c]
+  40:	d9 5c 24 18          	fstp   DWORD PTR [esp+0x18]
+  44:	d9 44 24 18          	fld    DWORD PTR [esp+0x18]
+  48:	dd 5c 24 04          	fstp   QWORD PTR [esp+0x4]
+  4c:	c7 04 24 19 00 00 00 	mov    DWORD PTR [esp],0x19
+  53:	e8 00 00 00 00       	call   58 <_main+0x58>
+  58:	b8 00 00 00 00       	mov    eax,0x0
+  5d:	c9                   	leave  
+  5e:	c3                   	ret    
+  5f:	90                   	nop
